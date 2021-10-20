@@ -283,16 +283,16 @@ func (s *Server) startTask() {
 	if err != nil {
 		logger.Warning("start xray failed:", err)
 	}
-	// 每 30 秒检查一次 xray 是否在运行
+	// Kiểm tra xem xray có đang chạy sau mỗi 30 giây hay không
 	s.cron.AddJob("@every 30s", job.NewCheckXrayRunningJob())
 
 	go func() {
 		time.Sleep(time.Second * 5)
-		// 每 10 秒统计一次流量，首次启动延迟 5 秒，与重启 xray 的时间错开
+		// Lưu lượng được tính cứ sau 10 giây và lần khởi động đầu tiên bị trễ 5 giây, điều này bị thay đổi so với thời gian khởi động lại xray
 		s.cron.AddJob("@every 10s", job.NewXrayTrafficJob())
 	}()
 
-	// 每 30 秒检查一次 inbound 流量超出和到期的情况
+	// Kiểm tra lưu lượng truy cập vào và hết hạn sau mỗi 30 giây
 	s.cron.AddJob("@every 30s", job.NewCheckInboundJob())
 }
 
