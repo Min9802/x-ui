@@ -418,7 +418,7 @@ show_menu() {
   ${green}6.${plain} Đặt cổng bảng điều khiển
 ————————————————
   ${green}7.${plain} khởi động x-ui
-  ${green}8.${plain} dừng lại x-ui
+  ${green}8.${plain} dừng x-ui
   ${green}9.${plain} Khởi động lại x-ui
  ${green}10.${plain} Kiểm tra x-ui State
  ${green}11.${plain} Kiểm tra x-ui Log
@@ -426,7 +426,7 @@ show_menu() {
  ${green}12.${plain} cài đặt x-ui Tự khởi động
  ${green}13.${plain} Hủy bỏ x-ui Tự khởi động
 ————————————————
- ${green}14.${plain} Cài đặt một cú nhấp chuột của bbr (hạt nhân mới nhất)
+ ${green}14.${plain} Cài đặt một cú nhấp chuột của bbr (mới nhất)
  "
     show_status
     echo && read -p "Vui lòng nhập lựa chọn [0-14]: " num
