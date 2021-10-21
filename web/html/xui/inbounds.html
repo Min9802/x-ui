@@ -58,17 +58,17 @@
                                     <a @click="e => e.preventDefault()">chạy</a>
                                     <a-menu slot="overlay" @click="a => clickAction(a, dbInbound)">
                                         <a-menu-item v-if="dbInbound.hasLink()" key="qrcode">
-                                            <a-icon type="qrcode"></a-icon>mã QR
+                                            <a-icon type="qrcode"></a-icon>Mã QR
                                         </a-menu-item>
                                         <a-menu-item key="edit">
-                                            <a-icon type="edit"></a-icon>chỉnh sửa
+                                            <a-icon type="edit"></a-icon>Chỉnh sửa
                                         </a-menu-item>
                                         <a-menu-item key="resetTraffic">
                                             <a-icon type="retweet"></a-icon>Đặt lại luồng
                                         </a-menu-item>
                                         <a-menu-item key="delete">
                                             <span style="color: #FF4D4F">
-                                                <a-icon type="delete"></a-icon>xóa bỏ
+                                                <a-icon type="delete"></a-icon>Xóa bỏ
                                             </span>
                                         </a-menu-item>
                                     </a-menu>
@@ -94,7 +94,7 @@
                                     <a-tag v-if="inbounds[index].stream.isTls" color="blue">tls</a-tag>
                                     <a-tag v-if="inbounds[index].stream.isXTls" color="blue">xtls</a-tag>
                                 </template>
-                                <template v-else>không có</template>
+                                <template v-else>Không có</template>
                             </template>
                             <template slot="enable" slot-scope="text, dbInbound">
                                 <a-switch v-model="dbInbound.enable" @change="switchEnable(dbInbound)"></a-switch>
@@ -234,7 +234,7 @@
             },
             openAddInbound() {
                 inModal.show({
-                    title: 'Thêm thư đến',
+                    title: 'Thêm cấu hình',
                     okText: 'Thêm vào',
                     confirm: async (inbound, dbInbound) => {
                         inModal.loading();
@@ -309,8 +309,8 @@
             },
             delInbound(dbInbound) {
                 this.$confirm({
-                    title: 'Xóa thư đến',
-                    content: 'Bạn có chắc chắn muốn xóa thư đến không?',
+                    title: 'Xóa cấu hình',
+                    content: 'Bạn có chắc chắn muốn xóa cấu hình không?',
                     okText: 'xóa bỏ',
                     cancelText: 'Hủy bỏ',
                     onOk: () => this.submit('/xui/inbound/del/' + dbInbound.id),

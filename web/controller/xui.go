@@ -30,13 +30,13 @@ func (a *XUIController) initRouter(g *gin.RouterGroup) {
 }
 
 func (a *XUIController) index(c *gin.Context) {
-	html(c, "index.html", "tình trạng hệ thống", nil)
+	html(c, "index.html", "Tình trạng hệ thống", nil)
 }
 
 func (a *XUIController) inbounds(c *gin.Context) {
-	html(c, "inbounds.html", "Danh sách đến", nil)
+	html(c, "inbounds.html", "Danh sách cấu hình", nil)
 }
 
 func (a *XUIController) setting(c *gin.Context) {
-	html(c, "setting.html", "thiết lập", nil)
+	html(c, "setting.html", "Thiết lập", nil)
 }
