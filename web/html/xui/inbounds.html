@@ -55,7 +55,7 @@
                                  @change="() => getDBInbounds()">
                             <template slot="action" slot-scope="text, dbInbound">
                                 <a-dropdown :trigger="['click']">
-                                    <a @click="e => e.preventDefault()">chạy</a>
+                                    <a @click="e => e.preventDefault()">Hành động</a>
                                     <a-menu slot="overlay" @click="a => clickAction(a, dbInbound)">
                                         <a-menu-item v-if="dbInbound.hasLink()" key="qrcode">
                                             <a-icon type="qrcode"></a-icon>Mã QR
@@ -121,12 +121,12 @@
 <script>
 
     const columns = [{
-        title: "chạy",
+        title: "Hành động",
         align: 'center',
         width: 30,
         scopedSlots: { customRender: 'action' },
     }, {
-        title: "Cho phép",
+        title: "Trạng thái",
         align: 'center',
         width: 40,
         scopedSlots: { customRender: 'enable' },
@@ -297,8 +297,8 @@
                 this.$confirm({
                     title: 'Đặt lại luồng',
                     content: 'Bạn có chắc chắn muốn thiết lập lại quy trình không?',
-                    okText: 'Cài lại',
-                    cancelText: 'Đang cài',
+                    okText: 'Xác nhận',
+                    cancelText: 'Hủy bỏ',
                     onOk: () => {
                         const inbound = dbInbound.toInbound();
                         dbInbound.up = 0;
@@ -311,7 +311,7 @@
                 this.$confirm({
                     title: 'Xóa cấu hình',
                     content: 'Bạn có chắc chắn muốn xóa cấu hình không?',
-                    okText: 'Xóa bỏ',
+                    okText: 'Xác nhận',
                     cancelText: 'Hủy bỏ',
                     onOk: () => this.submit('/xui/inbound/del/' + dbInbound.id),
                 });
