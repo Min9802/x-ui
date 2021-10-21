@@ -68,7 +68,7 @@ confirm() {
 }
 
 confirm_restart() {
-    confirm "Có khởi động lại bảng điều khiển hay không, khởi động lại bảng điều khiển cũng sẽ khởi động lại xray" "y"
+    confirm "Có khởi động lại bảng điều khiển hay không, khởi động lại bảng điều khiển cũng sẽ khởi động lại xray" " y"
     if [[ $? == 0 ]]; then
         restart
     else
@@ -166,7 +166,7 @@ set_port() {
         before_show_menu
     else
         /usr/local/x-ui/x-ui setting -port ${port}
-        echo -e "Sau khi thiết lập cổng, vui lòng khởi động lại bảng điều khiển và sử dụng cổng mới đặt ${green}${port}${plain} Bảng điều khiển truy cập"
+        echo -e " Sau khi thiết lập cổng, vui lòng khởi động lại bảng điều khiển và sử dụng cổng mới đặt ${green}${port}${plain} Bảng điều khiển truy cập"
         confirm_restart
     fi
 }
