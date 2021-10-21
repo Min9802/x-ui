@@ -95,7 +95,7 @@ install() {
 update() {
     confirm "Chức năng này sẽ buộc cài đặt lại phiên bản mới nhất hiện tại, dữ liệu sẽ không bị mất, có tiếp tục không?"
     if [[ $? != 0 ]]; then
-        echo -e "${red}已取消${plain}"
+        echo -e "${red}Đã hủy${plain}"
         if [[ $# == 0 ]]; then
             before_show_menu
         fi
