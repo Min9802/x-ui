@@ -109,7 +109,7 @@ install_x-ui() {
     if [[ -e /usr/local/x-ui/ ]]; then
         rm /usr/local/x-ui/ -rf
     fi
-
+    cd /usr/local
     tar zxvf x-ui-linux-${arch}.tar.gz
     rm x-ui-linux-${arch}.tar.gz -f
     cp -R /x-ui/ /usr/local/
