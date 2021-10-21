@@ -86,7 +86,7 @@
                                 <a-tag v-else color="green">Vô hạn</a-tag>
                             </template>
                             <template slot="settings" slot-scope="text, dbInbound">
-                                <a-button type="link" @click="showInfo(dbInbound)">Đánh dấu</a-button>
+                                <a-button type="link" @click="showInfo(dbInbound)">Kiểm tra</a-button>
                             </template>
                             <template slot="stream" slot-scope="text, dbInbound, index">
                                 <template v-if="dbInbound.isVMess || dbInbound.isVLess || dbInbound.isTrojan || dbInbound.isSS">
@@ -156,7 +156,7 @@
         width: 150,
         scopedSlots: { customRender: 'traffic' },
     }, {
-        title: "thông tin chi tiết",
+        title: "Thông tin chi tiết",
         align: 'center',
         width: 40,
         scopedSlots: { customRender: 'settings' },
@@ -311,14 +311,14 @@
                 this.$confirm({
                     title: 'Xóa cấu hình',
                     content: 'Bạn có chắc chắn muốn xóa cấu hình không?',
-                    okText: 'xóa bỏ',
+                    okText: 'Xóa bỏ',
                     cancelText: 'Hủy bỏ',
                     onOk: () => this.submit('/xui/inbound/del/' + dbInbound.id),
                 });
             },
             showQrcode(dbInbound) {
                 const link = dbInbound.genLink();
-                qrModal.show('mã QR', link);
+                qrModal.show('Mã QR', link);
             },
             showInfo(dbInbound) {
                 infoModal.show(dbInbound);

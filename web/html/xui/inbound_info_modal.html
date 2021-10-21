@@ -1,8 +1,8 @@
 {{define "inboundInfoModal"}}
 {{template "component/inboundInfo"}}
-<a-modal id="inbound-info-modal" v-model="infoModal.visible" title="thông tin chi tiết" @ok="infoModal.ok"
+<a-modal id="inbound-info-modal" v-model="infoModal.visible" title="Thông tin chi tiết" @ok="infoModal.ok"
          :closable="true" :mask-closable="true"
-         ok-text="sao chép đường dẫn" cancel-text='{{ i18n "close" }}' :ok-button-props="infoModal.okBtnPros">
+         ok-text="Sao chép đường dẫn" cancel-text='{{ i18n "close" }}' :ok-button-props="infoModal.okBtnPros">
     <inbound-info :db-inbound="dbInbound" :inbound="inbound"></inbound-info>
 </a-modal>
 <script>
