@@ -417,8 +417,8 @@ show_menu() {
   ${green}5.${plain} Đặt lại cài đặt bảng điều khiển
   ${green}6.${plain} Đặt cổng bảng điều khiển
 ————————————————
-  ${green}7.${plain} khởi động x-ui
-  ${green}8.${plain} dừng x-ui
+  ${green}7.${plain} Khởi động x-ui
+  ${green}8.${plain} Dừng x-ui
   ${green}9.${plain} Khởi động lại x-ui
  ${green}10.${plain} Kiểm tra x-ui State
  ${green}11.${plain} Kiểm tra x-ui Log
