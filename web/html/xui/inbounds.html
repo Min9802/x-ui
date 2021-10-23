@@ -35,7 +35,7 @@
                                 <a-tag color="green">[[ sizeFormat(total.up + total.down) ]]</a-tag>
                             </a-col>
                             <a-col :xs="24" :sm="24" :lg="12">
-                                Số lượng đến:
+                                Số lượng cấu hình:
                                 <a-tag color="green">[[ dbInbounds.length ]]</a-tag>
                             </a-col>
                         </a-row>
@@ -235,7 +235,7 @@
             openAddInbound() {
                 inModal.show({
                     title: 'Thêm cấu hình',
-                    okText: 'Thêm vào',
+                    okText: 'Lưu cấu hình',
                     confirm: async (inbound, dbInbound) => {
                         inModal.loading();
                         await this.addInbound(inbound, dbInbound);
@@ -246,8 +246,8 @@
             openEditInbound(dbInbound) {
                 const inbound = dbInbound.toInbound();
                 inModal.show({
-                    title: 'Sửa đổi đầu vào',
-                    okText: 'Sửa lại',
+                    title: 'Sửa đổi cấu hình',
+                    okText: 'Lưu cấu hình',
                     inbound: inbound,
                     dbInbound: dbInbound,
                     confirm: async (inbound, dbInbound) => {

@@ -45,7 +45,7 @@
                                 <setting-list-item type="text" title="bảng điều khiển url Đường dẫn gốc" desc="Phải bắt đầu với '/' Bắt đầu với '/' kết thúc，Khởi động lại bảng điều khiển để có hiệu lực" v-model="allSetting.webBasePath"></setting-list-item>
                             </a-list>
                         </a-tab-pane>
-                        <a-tab-pane key="2" tab="thiết lập người dùng">
+                        <a-tab-pane key="2" tab="Thiết lập người dùng">
                             <a-form style="background: white; padding: 20px">
                                 <a-form-item label="tên người dùng ban đầu">
                                     <a-input v-model="user.oldUsername" style="max-width: 300px"></a-input>
@@ -62,16 +62,16 @@
                                              style="max-width: 300px"></a-input>
                                 </a-form-item>
                                 <a-form-item>
-                                    <a-button type="primary" @click="updateUser">sửa lại</a-button>
+                                    <a-button type="primary" @click="updateUser">Lưu</a-button>
                                 </a-form-item>
                             </a-form>
                         </a-tab-pane>
-                        <a-tab-pane key="3" tab="xray Cài đặt liên quan">
+                        <a-tab-pane key="3" tab="Cài đặt liên quan xray">
                             <a-list item-layout="horizontal" style="background: white">
                                 <setting-list-item type="textarea" title="xray Mẫu cấu hình" desc="Dựa trên mẫu để tạo ra kết quả cuối cùng xray Tập tin cấu hình，Khởi động lại bảng điều khiển để có hiệu lực" v-model="allSetting.xrayTemplateConfig"></setting-list-item>
                             </a-list>
                         </a-tab-pane>
-                        <a-tab-pane key="4" tab="các thiết lập khác">
+                        <a-tab-pane key="4" tab="Các thiết lập khác">
                             <a-list item-layout="horizontal" style="background: white">
                                 <setting-list-item type="text" title="Múi giờ" desc="Các tác vụ đã lên lịch chạy theo thời gian trong múi giờ，Khởi động lại bảng điều khiển để có hiệu lực" v-model="allSetting.timeLocation"></setting-list-item>
                             </a-list>
