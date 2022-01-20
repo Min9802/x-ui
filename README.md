@@ -36,6 +36,24 @@ systemctl daemon-reload
 systemctl enable x-ui
 systemctl restart x-ui
 ```
+# Cài với docker
+1. cài đặt docker
+```
+curl -fsSL https://get.docker.com | sh
+```
+2. Cài đặt x-ui
+```
+mkdir x-ui && cd x-ui
+docker run -itd --network=host \
+    -v $PWD/db/:/etc/x-ui/ \
+    -v $PWD/cert/:/root/cert/ \
+    --name x-ui --restart=unless-stopped \
+    enwaiax/x-ui:latest
+```
+3. Build
+```
+docker build -t x-ui .
+```
 ## Hệ điều hành được hỗ trợ cài đặt
 
 - CentOS 7+
