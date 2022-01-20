@@ -38,7 +38,7 @@ systemctl daemon-reload
 systemctl enable x-ui
 systemctl restart x-ui
 ```
-# Cài với docker
+# Cài với docker (Chưa việt hóa)
 1. cài đặt docker
 ```
 curl -fsSL https://get.docker.com | sh
