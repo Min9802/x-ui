@@ -19,11 +19,13 @@ Bảng điều khiển `xray` đa giao thức và nhiều người dùng việt 
 bash <(curl -Ls https://raw.githubusercontent.com/min9802/x-ui/master/install.sh)
 ```
 # Cài bằng tay
-Clone từ repo này với lệnh sau
+1. Clone repo
+Clone repo này về máy với lệnh sau
 ```
 https://github.com/Min9802/x-ui.git
 ```
-Sau đó đăng nhập với root
+2. Cài đặt
+Đăng nhập với root
 ```
 cd /root/
 rm x-ui/ /usr/local/x-ui/ /usr/bin/x-ui -rf
